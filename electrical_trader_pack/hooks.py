@@ -44,6 +44,7 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Item" : "public/js/item.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -249,4 +250,28 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
+
+# Custom Fields
+# -------------
+custom_fields = {
+    "Item": [
+        {
+            "fieldname": "brand_link",
+            "label": "Brand Mapping",
+            "fieldtype": "Link",
+            "options": "Brand Mapping",
+            "insert_after": "brand",
+            "description": "Select the mapped brand for automation and reporting."
+        },
+        {
+            "fieldname": "tech_attr_link",
+            "label": "Technical Attributes",
+            "fieldtype": "Link",
+            "options": "Technical Attributes",
+            "insert_after": "brand_link",
+            "description": "Specify electrical specifications like Voltage/Phase."
+        }
+    ]
+}
+
 
